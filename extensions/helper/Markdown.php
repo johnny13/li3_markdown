@@ -24,6 +24,18 @@ class Markdown extends \lithium\template\Helper {
         return MarkdownExtended($string);
     }
 
+    /**
+     * This public static instance on the function allows you to
+     * call the markdown render in your controller file.
+     *
+     * Example:
+     * use li3_markdown\extensions\helper\Markdown;
+     * $beauty = Markdown::rendermarkdown($rawtext);
+     *
+     * @link http://michelf.com/projects/php-markdown/
+     * @param string $string Content that we want to be parsed from `markdown` into `HTML`.
+     * @return string `HTML` ready string.
+     */
     public static function rendermarkdown($string){
         return MarkdownExtended($string);
     }
