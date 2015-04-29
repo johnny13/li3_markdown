@@ -1,4 +1,7 @@
 # Markdown parser for [Lithium PHP](http://lithify.me)
+
+I forked this library in order to add better lithium support. Making a public version of the helper will allow you to also call this same functionality in your controller files.
+
 Lithium library for parsing markdown, uses [PHP Markdown Extra Extended](https://github.com/egil/php-markdown-extra-extended).
 
 PHP Markdown Extra version: `1.2.4`
@@ -15,7 +18,7 @@ Modify your projects `composer.json` file
 {
     "require": {
     	...
-        "bruensicke/li3_markdown": "master"
+        "johnny13/li3_markdown": "master"
         ...
     }
 }
@@ -33,19 +36,32 @@ __Submodule__
 
 From your `app` directory:
 
-	git submodule add git://github.com/bruensicke/li3_markdown.git libraries/li3_markdown
+	git submodule add git://github.com/johnny13/li3_markdown.git libraries/li3_markdown
 
 __Clone__
 
 From your `app/libraries` directory:
 
-	git clone git://github.com/bruensicke/li3_markdown.git
+	git clone git://github.com/johnny13/li3_markdown.git
 
 
 ## Usage:
 To enable the library add the following line at the end of `app/config/bootstrap/libraries.php`:
 
     Libraries::add('li3_markdown');
+
+
+### Controller Files
+You can easily process text in any controller file like so:
+
+     //Include the helper in your controller
+     use li3_markdown\extensions\helper\Markdown;
+     
+     ...
+     
+     //Later in your function turn raw text to markdown
+     $beauty = Markdown::rendermarkdown($rawtext);
+
 
 ### Markdown Views
 
@@ -68,7 +84,7 @@ To render the result within a template file simply call the `markdown` helper an
 
 Add a submodule to your li3 libraries:
 
-	git submodule add git@github.com:bruensicke/li3_markdown.git libraries/li3_markdown
+	git submodule add git@github.com:johnny13/li3_markdown.git libraries/li3_markdown
 
 and activate it in you app (config/bootstrap/libraries.php), of course:
 
@@ -83,5 +99,5 @@ As always, I welcome your collaboration to make things "even more betterer", so 
 * [joseym/li3_markdown](https://github.com/joseym/li3_markdown)
 * [sandelius/li3_markdown](https://github.com/sandelius/li3_markdown)
 
-Please report any bug, here: https://github.com/bruensicke/li3_markdown/issues
+Please report any bug, here: https://github.com/johnny13/li3_markdown/issues
 
