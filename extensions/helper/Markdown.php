@@ -23,6 +23,10 @@ class Markdown extends \lithium\template\Helper {
     public function render($string) {
         return MarkdownExtended($string);
     }
+
+    public static function rendermarkdown($string){
+        return MarkdownExtended($string);
+    }
 }
 
 ?>
