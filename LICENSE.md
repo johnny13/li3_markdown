@@ -1,4 +1,4 @@
-Copyright (c) 2013, brünsicke.com GmbH http://bruensicke.com/
+Copyright (c) 2015, huement.com http://huement.com/
 
 All rights reserved.
 
